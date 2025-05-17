@@ -1,39 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-
-
-
-<body  style=" margin: 0;
-  height: 100vh;
-  background: linear-gradient(
-    45deg,
-    #f58529,  
-    #dd2a7b,   
-    #8134af,   
-    #515bd4" >
-
-    
-     <div style="margin-top: 50px;">
-    <center style="margin: 111px;">
-        <h1>Hello friends we are going to see instagram </h1>
+<html>
+  <head>
+    <title>Instagram Login</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        background-color: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
+      input {
+        padding: 10px;
+        width: 80%;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+      }
+      .btn-submit {
+        background-color: greenyellow;
+        font-weight: bold;
+        width: 100px;
+        border-radius: 15px;
+        padding: 10px;
+        margin-top: 20px;
+        border: none;
+      }
+      .btn-link {
+        margin-top: 10px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hello friends, we are going to see Instagram</h1>
 
    
-<label for="user"> User Name:-</label>
-<input type="text" id="user" name="user name" placeholder="enter user name"/>
-    <br><br>
-<label for="user" re>Password   </label >
-<input type="text"id="user" name="  password" placeholder="enter  password" pattern="(!=.*[a-z])(!=.*[a-z])(!=.*[\d])(!=.*[!@#%^&*]){4,16}"><br><br>
-<button ><a href="./forgetpage.html">forget password</a></button><BR></bR>
-<a href="./backend.html">
-    <input  type="submit"value="submit" style="background-color: greenyellow; font-weight: bold; width: 90px; border-radius: 15px;"><br><br>
-</a>
-</center>
-</div>
-</body>
+        <label for="username">User Name:</label><br />
+        <input
+          type="email"
+          id="username"
+          name="username"
+          placeholder="Enter user name"
+          required
+        /><br /><br />
+
+        <label for="password">Password:</label><br />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter password"
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d])[A-Za-z\d\W]{4,10}$"
+          required
+        /><br /><br />
+
+        <a class="btn-link" href="./forgetpage.html">Forgot password?</a
+        ><br /><br />
+
+        <a href="./backend.html"><input type="submit" class="btn-submit" value="Submit" /></a>
+      
+    </div>
+  </body>
 </html>
